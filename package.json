@@ -1,0 +1,34 @@
+{
+  "name": "mygoose",
+  "version": "1.0.0",
+  "description": "Mysql model handler mongoose way",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha ./tests/model.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aluzed/mygoose.git"
+  },
+  "keywords": [
+    "mysql",
+    "json",
+    "model"
+  ],
+  "author": "Alexandre Penombre <aluzed@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aluzed/mygoose/issues"
+  },
+  "homepage": "https://github.com/aluzed/mygoose#readme",
+  "dependencies": {
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "bcrypt": "^1.0.3",
+    "mocha": "^4.0.1"
+  }
+}
