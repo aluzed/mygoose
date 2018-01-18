@@ -16,14 +16,15 @@ module.exports = {
    * Put the dbConfig in the process.env.Mygoose.dbConfig
    */
   connect: (dbConfig) => {
-      process.env.dbConfig = JSON.stringify(dbConfig);
+    conf.db = JSON.stringify(dbConfig);
+    
   },
   // model.js
   model: mygooseModel,
   // schema.js
   Schema: mygooseSchema,
   // local dbConfig
-  _dbConfig: process.env.dbConfig,
+  _dbConfig: conf.db,
   // run a query
   runOnce: (queryStr, options) => {
     let query = new Query();

@@ -10,6 +10,7 @@ const Query         = require('./query');
 const path          = require('path');
 const _TABLES_PATH_ = path.join(__dirname, '../../tables');
 const dateHelpers   = require('../helpers/dates');
+const Promise       = require('bluebird');
 
 module.exports = (table, model) => {
   if(!model.id) {

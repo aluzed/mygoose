@@ -6,7 +6,8 @@
 * Copyright(c) 2017 Alexandre PENOMBRE
 * <aluzed_AT_gmail.com>
 */
-const Query = require('./query');
+const Query   = require('./query');
+const Promise = require('bluebird');
 
 module.exports = (table, model, options) => {
   const schema = model.schema;

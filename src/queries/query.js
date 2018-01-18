@@ -7,7 +7,8 @@
 * <aluzed_AT_gmail.com>
 */
 "use strict";
-const mysql      = require('mysql');
+const mysql   = require('mysql');
+const Promise = require('bluebird');
 
 class Query {
   /**
@@ -72,11 +73,11 @@ class Query {
   */
   close() {
     if(!this.connection) throw new Error('Error, connection must be initialized');
-    this.connection.end();
+      this.connection.end();
   }
 
   /**
-   * runOnly Method
+   * runOnce Method
    *
    * @param {String} queryStr
    * @param {Object} options
@@ -84,6 +85,7 @@ class Query {
    */
   runOnce(queryStr, options) {
     this.init(options);
+
     return this.run(queryStr).then(resObject => {
       this.close();
       return resObject;

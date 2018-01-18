@@ -8,6 +8,7 @@
 */
 const Query         = require('./query');
 const dateHelpers   = require('../helpers/dates');
+const Promise       = require('bluebird');
 
 module.exports = (table, model) => {
   const schema = model.schema;
